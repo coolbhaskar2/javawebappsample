@@ -20,7 +20,7 @@ node {
   def resourceGroup = 'dndBhaskar'
   def webAppName = 'jenkinjavatestweb'
     // login Azure
-    withCredentials([azureServicePrincipal('ac4d5a92-cfda-4deb-a38c-e0e7f1d052e3')]) {
+    withCredentials([azureServicePrincipal('')]) {
       sh '''
         az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID
         az account set -s $AZURE_SUBSCRIPTION_ID
